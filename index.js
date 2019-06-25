@@ -4,8 +4,8 @@ const PORT = process.env.PORT || 5000
 
 const { Pool } = require('pg');
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
-  // ssl: true
+  connectionString: process.env.DATABASE_URL,
+  ssl: true
 });
 
 express()
@@ -21,6 +21,7 @@ express()
       const client = await pool.connect()
       const result = await client.query('SELECT * FROM test_table');
       const results = { 'results': (result) ? result.rows : null};
+
       res.render('pages/db', results );
       client.release();
     } catch (err) {
