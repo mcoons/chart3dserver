@@ -31,6 +31,7 @@
         <li>heroku addons:docs papertrail</li>
         <li>heroku addons:open papertrail</li>
         <li>heroku addons:docs heroku-postgresql</li>
+        <li>heroku pg:info</li>
       </ul>
     </div>
     <div class="col-md-6">
@@ -52,7 +53,15 @@
       ALERT!!!!!!
   </div>
 </div>
-
+<p id='server-time'></p>
+<script src="/js/socket.io.js"></script>
+<script>
+  var socket = io();
+  var el = document.getElementById('server-time');
+  socket.on('time', function(timeString) {
+    el.innerHTML = 'Server time: ' + timeString;
+  });
+</script>
 
 </body>
 </html>
