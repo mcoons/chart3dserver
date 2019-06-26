@@ -1,8 +1,8 @@
 {
   "name": "michaelcoons",
-  "homepage": "http://mcoons.github.io",
+  "homepage": "",
   "version": "1.0.0",
-  "description": "Personal Site",
+  "description": "Exploration",
   "main": "app/app.js",
   "scripts": {
     "start": "node app/app.js"
@@ -10,6 +10,8 @@
   "author": "Michael Coons",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "pg": "^7.11.0",
+    "socket.io": "^2.2.0"
   }
 }
