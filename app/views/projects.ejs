@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head><% include partials/head.ejs %></head>
+  <body id="<%= pageID %>">
+    <% include partials/header.ejs %>
+    
+    <section class="timeline">
+      <h1 class="projects-title">Web Projects</h1>
+        <ul>
+          <li>
+            <div>
+              <time>March, 2019</time>
+              <h1>Noise</h1>
+              <img src="/images/projects/noise.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>This is an exploration of perlin and simplex noise.  I use the noise to produce multiple 2D and 3D textures.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript and Babylon.JS</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/noise">GitHub Link</a><br>
+              <a href="http://noise.michaelcoons.tech/">Published Link</a><br>
+            </div>
+          </li>     
+          <li>            
+            <div>
+              <time>February, 2019</time>
+              <h1>Snowflakes</h1>
+              <img src="/images/projects/snowflakes.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>This is an overlay that simulates snowflakes falling. It uses a canvas element for the overlay. There are random wind and intensity changes along with random snowflake properties.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/snowflakes">GitHub Link</a><br>
+              <a href="https://mcoons.github.io/snowflakes/">Published Link</a><br>
+            </div>
+          </li>                     
+          <li>            
+            <div>
+              <time>January, 2019</time>
+              <h1>React News</h1>
+              <img src="/images/projects/react-news.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>This is a simple React News API reader.  Powered by NewsAPI.org.  This utilizes local storage to cache articles for an hour.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript, React and JSX</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/react-news">GitHub Link</a><br>
+              <a href="http://react-news-feeds.michaelcoons.tech/">Published Link</a><br>
+            </div>
+          </li>                     
+          <li>
+              <div>
+              <time>December, 2018</time>
+              <h1>Pomodoro</h1>
+              <img src="/images/projects/pomodoro.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>This is my take on a Pomodoro app to help with my time management. This utilizes the Howler.js library for sound and local storage to cache settings.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript, Howler.js and multiple Canvas element overlays.</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/pomodoro">GitHub Link</a><br>
+              <a href="http://pomodoro.michaelcoons.tech">Published Link</a><br>
+            </div>
+          </li>  
+          <li>
+            <div>
+              <time>December, 2018</time>
+              <h1>Polar Equations</h1>
+              <img src="/images/projects/polareqs.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>This app allows you to explore Polar Equations. This utilizes local storage to cache settings.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript and multiple Canvas element overlays.</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/polareqs">GitHub Link</a><br>
+              <a href="https://polareqs.michaelcoons.tech">Published Link</a><br>
+            </div>
+          </li>            
+          <li>
+            <div>
+              <time>November, 2018</time>
+              <h1>Menger Planes</h1>
+              <img src="/images/projects/menger4layers.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>This third implementation quickly generates an L4 Menger sponge <strong>using only 984 vertices</strong> instead of <strong>3,840,000!!</strong> It uses planes and textures for the different layers of the sponge.</p>
+              <p>This utilizes the Babylon.js framework to create the menger sponge.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript and Babylon.JS</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/mengerplanes">GitHub Link</a><br>
+              <a href="https://mcoons.github.io/mengerplanes/">Published Link</a><br>
+            </div>
+          </li>              
+          <li>
+            <div>
+              <time>November, 2018</time>
+              <h1>Menger Take 2</h1>
+              <img src="/images/projects/menger2.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>By utilizing CSG I was able to reduce the vertices down to 1,492,120 from 3,840,000.  Clones were also used to help with optimization.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript and Babylon.JS</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/menger2">GitHub Link</a><br>
+              <a href="https://mcoons.github.io/menger2/">Published Link</a><br>
+            </div>
+          </li>           
+          <li>
+            <div>
+              <time>November, 2018</time>
+              <h1>Menger Sponge</h1>
+              <img src="/images/projects/menger.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>Explore the Menger Sponge fractal.  This utilizes the Babylon.js framework to create a menger sponge. It is a three-dimensional generalization of the one-dimensional Cantor set and two-dimensional Sierpinski carpet.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript and Babylon.JS</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/menger">GitHub Link</a><br>
+              <a href="https://mcoons.github.io/menger/">Published Link</a><br>
+            </div>
+          </li>          
+          <li>
+            <div>
+              <time>October, 2018</time>
+              <h1>Spartan Fan Page</h1>
+              <img src="/images/projects/spartans.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>This is a very simple server side rendered app written for the Spartan parents so they can download pictures I take of the players.  It has very low maintenance.  I just add a new image directory and it <strong>dynamically updates</strong> the menu and pages <strong>by reading the file system</strong>.</p>
+              <h3>Technologies</h3>
+              <p>Node, Express, JavaScript and EJS</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/spartans">GitHub Link</a><br>
+              <a href="http://spartans.michaelcoons.tech">Published Link</a><br>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>September, 2018</time>                         
+              <h1>Tower of Three</h1>
+              <img src="/images/projects/tower2.gif" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>Galvanize Capstone Project</p>
+              <p>Given 10 days to come up with a project idea using an unfamiliar technology and build it.</p>
+              <p>It's an <strong>object oriented</strong> 3D tower game using an <strong>event bus architecture</strong> for component communication.</p>
+              <p><strong><a href="https://www.youtube.com/watch?v=IRuc8Y7rJcs">Capstone Presentation</a></strong></p>
+              <h3>Technologies</h3>
+              <p>Frontend: HTML, CSS, JavaScript and ThreeJS</p>
+              <p>Backend: Node, Express, Knex, PostgreSQL</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/tower-of-horror">GitHub Link</a><br>
+              <a href="https://towerofhorror.herokuapp.com/index.html">Published Link</a><br>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>August, 2018</time>
+              <h1>CRāV</h1>
+              <img src="/images/projects/crav.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>A group project to practice <strong>paired programming, storyboarding</strong> and <strong>Scrum</strong>. With four days from idea to final presentation using an unfamiliar technology which was VueJS.</p>
+              <h3>Technologies</h3>
+              <p>Frontend: JavaScript and Vue</p>
+              <p>Backend: Node, JavaScript, Express, Knex and PostgreSQL</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/crav_fe">GitHub Frontend</a><br>
+              <a href="https://github.com/mcoons/crav_be">GitHub Backend API</a><br>
+              <a href="https://crav-5afdb.firebaseapp.com/">Published Frontend</a><br>
+              <a href="https://crav.herokuapp.com/">Published Backend</a><br>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>August, 2018</time>
+              <h1>Photo Blog</h1>
+              <img src="/images/projects/photoblog.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>A simple server side rendered photo blog application created with Express and EJS.  It has full <strong>CRUD</strong> capabilities.  Database is stored in a Mongo Database.</p>
+              <h3>Technologies</h3>
+              <p>Node, JavaScript, Express, EJS, Mongoose and MongoDB</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/photoblog">GitHub Link</a><br>
+              <a href="http://photoblog.michaelcoons.tech">Published Link</a><br>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>August, 2018</time>
+              <h1>g90 Cohort Directory</h1>
+              <img src="/images/projects/g90.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>This is a directory of our cohort so we can keep in touch. It is a full stack server side <strong>CRUD</strong> app written using Node, Express and EJS.  It uses Knex with a PostgreSQL database.</p>
+              <h3>Technologies</h3>
+              <p>Node, JavaScript, Express, EJS, Knex and PostgreSQL</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/g90directory">GitHub Link</a><br>
+              <a href="http://g90.michaelcoons.tech/">Published Link</a><br>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>July, 2018</time>
+              <h1>Date Analyzer</h1>
+              <img src="/images/projects/dateanalyzer.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>To build a light application that reads data, has <strong>end-to-end testing</strong>, and integrates with an API</p>
+              <h3>Technologies</h3>
+              <p>React, JavaScript and Cypress</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/galvanize-frontend-app/tree/master/drills/version-1/datanalyzer">GitHub Link</a><br>
+              <a href="https://dateanalyzer.firebaseapp.com/">Published Link</a><br>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>June, 2018</time>
+              <h1>Sprite Creator</h1>
+              <img src="/images/projects/pixel.png" alt="" class="img-responsive hidden-xs projects-img">
+              <h3>Purpose</h3>
+              <p>An advanced pixel art application.  It has multiple brush sizes, undo options, smart background, import/export among other features.</p>
+              <h3>Technologies</h3>
+              <p>HTML, CSS, JavaScript</p>
+              <h3>Links</h3>
+              <a href="https://github.com/mcoons/spritemaker">GitHub Link</a><br>
+              <a href="https://pixelpaint-81fce.firebaseapp.com/">Published Link</a><br>
+            </div>
+          </li>
+      </section>
+
+    <% include partials/footer.ejs %>
+
+<script>
+
+(function() {
+
+'use strict';
+
+// define variables
+var items = document.querySelectorAll(".timeline li");
+
+// check if an element is in viewport
+// http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight+300 || document.documentElement.clientHeight+300) &&
+    rect.right <= (window.innerWidth+300 || document.documentElement.clientWidth+300)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+
+// listen for events
+window.addEventListener("load", callbackFunc);
+window.addEventListener("resize", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+
+})();
+</script>
+
+  </body>
+</html>
