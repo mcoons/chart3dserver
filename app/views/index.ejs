@@ -65,12 +65,32 @@
     <% include partials/footer.ejs %>
 
     <script>
-      var HOST = location.origin.replace(/^http/, 'ws')
-      var ws = new WebSocket(HOST);
-      var el = document.getElementById('server-time');
-      ws.onmessage = function (event) {
-        el.innerHTML = 'Server time: ' + event.data;
-      };
+    //   var HOST = location.origin.replace(/^http/, 'ws');
+    //   console.log('HOST');
+    //   console.log(HOST);
+    //   var ws = new WebSocket(HOST);
+    //   console.log('ws');
+    //   console.log(ws);
+
+
+        var socket = io();
+  
+        // send join message to server
+        socket.on("connect", function(){
+            socket.emit('msg','user joined to server');
+        });
+
+        var el = document.getElementById('server-time');
+
+
+
+        socket.on('time', function(msg){
+            el.innerHTML = 'Server time: ' + msg;
+
+  });
+
+
+
     </script>
 
 </body>
