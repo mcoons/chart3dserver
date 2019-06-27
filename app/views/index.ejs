@@ -9,6 +9,7 @@
 
     <% include partials/header.ejs %>
     <p id='server-time'></p>
+    <p id='client-time'></p>
 
     <div class="container">
         <div class="maincontent">
@@ -81,11 +82,13 @@
         });
 
         var el = document.getElementById('server-time');
+        var el2 = document.getElementById('server-time');
 
 
 
         socket.on('time', function(msg){
             el.innerHTML = 'Server time: ' + msg;
+            el2.innerHTML = 'Client time: ' + new Date().toTimeString();
 
   });
 
