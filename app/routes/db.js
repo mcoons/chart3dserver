@@ -9,7 +9,7 @@ const pool = new Pool({
 
 router.get('/db', async (req, res) => {
     try {
-      const client = await pool.connect()
+      const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table');
 
       res.render('db', { 'results': (result) ? result.rows : null,

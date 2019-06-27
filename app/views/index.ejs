@@ -66,33 +66,21 @@
     <% include partials/footer.ejs %>
 
     <script>
-    //   var HOST = location.origin.replace(/^http/, 'ws');
-    //   console.log('HOST');
-    //   console.log(HOST);
-    //   var ws = new WebSocket(HOST);
-    //   console.log('ws');
-    //   console.log(ws);
-
 
         var socket = io();
   
-        // send join message to server
         socket.on("connect", function(){
-            socket.emit('msg','user joined to server');
+            socket.emit('msg','message from client');
         });
 
         var el = document.getElementById('server-time');
         var el2 = document.getElementById('client-time');
 
-
-
         socket.on('time', function(msg){
             el.innerHTML = 'Server time: ' + msg;
             el2.innerHTML = 'Client time: ' + new Date().toTimeString();
 
-  });
-
-
+        });
 
     </script>
 
