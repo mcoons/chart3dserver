@@ -1,12 +1,10 @@
 
 var express = require('express');
 var app = express();
-var http = require('http').Server(app);
-var ioServer = require('socket.io')(http);
 
 const localport = 5000;
-
 app.set('port', process.env.PORT || localport);
+
 app.set('view engine', 'ejs');
 app.set('views', 'app/views');
 
@@ -23,6 +21,10 @@ var server = http.listen(app.get('port'), function(){
 });
 
 
+
+var http = require('http').Server(app);
+var ioServer = require('socket.io')(http);
+
 ioServer.on('connection', (socket) => {
     console.log('Client connected');
     socket.on('disconnect', () => console.log('Client disconnected'));
@@ -32,9 +34,5 @@ ioServer.on('connection', (socket) => {
 
 setInterval(
     () => { ioServer.emit('time', new Date().toTimeString());
-//    console.log(new Date().toTimeString());
 }, 1000)
-
-
-
 
