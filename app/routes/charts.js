@@ -12,7 +12,7 @@ router.get('/charts', async (req, res) => {
 
       console.log('trying to send mail.');
 
-      var transporter = nodemailer.createTransport('SMTP',{
+      var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
           user: process.env.MAIL_USERNAME,
