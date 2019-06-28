@@ -10,8 +10,10 @@ var nodemailer = require('nodemailer');
 router.get('/charts', async (req, res) => {
     try {
 
-      var transporter = nodemailer.createTransport({
-        service: 'gmail',
+      console.log('trying to send mail.');
+
+      var transporter = nodemailer.createTransport('SMTP',{
+        service: 'Gmail',
         auth: {
           user: process.env.MAIL_USERNAME,
           pass: process.env.MAIL_PASSWORD
