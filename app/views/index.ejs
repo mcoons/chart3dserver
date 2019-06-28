@@ -8,8 +8,7 @@
 <body id=" <%= pageID %>">
 
     <% include partials/header.ejs %>
-    <p id='server-time'></p>
-    <p id='client-time'></p>
+
 
     <div class="container">
         <div class="maincontent">
@@ -65,24 +64,7 @@
 
     <% include partials/footer.ejs %>
 
-    <script>
 
-        var socket = io();
-  
-        socket.on("connect", function(){
-            socket.emit('msg','message from client');
-        });
-
-        var el = document.getElementById('server-time');
-        var el2 = document.getElementById('client-time');
-
-        socket.on('time', function(msg){
-            el.innerHTML = 'Server time: ' + msg;
-            el2.innerHTML = 'Client time: ' + new Date().toTimeString();
-
-        });
-
-    </script>
 
 </body>
 

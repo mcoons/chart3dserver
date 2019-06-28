@@ -17,6 +17,7 @@ app.use(require('./routes/index'));
 app.use(require('./routes/projects'));
 app.use(require('./routes/contact'));
 app.use(require('./routes/db'));
+app.use(require('./routes/charts'));
 
 var server = http.listen(app.get('port'), function(){
     console.log("listening on port: " + app.get('port'));
@@ -34,7 +35,5 @@ setInterval(
     () => { ioServer.emit('time', new Date().toTimeString());
 //    console.log(new Date().toTimeString());
 }, 1000)
-
-
 
 
