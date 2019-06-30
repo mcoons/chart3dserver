@@ -174,8 +174,12 @@ class ChartSceneManager {
         return chart;
     }
 
-    updateChart(options) {
+    updateChart(chart, options) {
 
+        console.log('chart in update');
+        console.log(chart);
+
+        // if (options.type === chart.)
     }
 
     removeChart(id) {

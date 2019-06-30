@@ -1,147 +1,96 @@
+/*
+let sampleJSONData = {
+    "rovers": [{
+        "id": 5,
+        "name": "Curiosity",
+        "landing_date": "2012-08-06",
+        "launch_date": "2011-11-26",
+        "status": "active",
+        "max_sol": 2422,
+        "max_date": "2019-05-30",
+        "total_photos": 352391,
+        "cameras": [{
+            "name": "FHAZ",
+            "full_name": "Front Hazard Avoidance Camera"
+        }, {
+            "name": "NAVCAM",
+            "full_name": "Navigation Camera"
+        }, {
+            "name": "MAST",
+            "full_name": "Mast Camera"
+        }, {
+            "name": "CHEMCAM",
+            "full_name": "Chemistry and Camera Complex"
+        }, {
+            "name": "MAHLI",
+            "full_name": "Mars Hand Lens Imager"
+        }, {
+            "name": "MARDI",
+            "full_name": "Mars Descent Imager"
+        }, {
+            "name": "RHAZ",
+            "full_name": "Rear Hazard Avoidance Camera"
+        }]
+    }, {
+        "id": 7,
+        "name": "Spirit",
+        "landing_date": "2004-01-04",
+        "launch_date": "2003-06-10",
+        "status": "complete",
+        "max_sol": 2208,
+        "max_date": "2010-03-21",
+        "total_photos": 124550,
+        "cameras": [{
+            "name": "FHAZ",
+            "full_name": "Front Hazard Avoidance Camera"
+        }, {
+            "name": "NAVCAM",
+            "full_name": "Navigation Camera"
+        }, {
+            "name": "PANCAM",
+            "full_name": "Panoramic Camera"
+        }, {
+            "name": "MINITES",
+            "full_name": "Miniature Thermal Emission Spectrometer (Mini-TES)"
+        }, {
+            "name": "ENTRY",
+            "full_name": "Entry, Descent, and Landing Camera"
+        }, {
+            "name": "RHAZ",
+            "full_name": "Rear Hazard Avoidance Camera"
+        }]
+    }, {
+        "id": 6,
+        "name": "Opportunity",
+        "landing_date": "2004-01-25",
+        "launch_date": "2003-07-07",
+        "status": "complete",
+        "max_sol": 5111,
+        "max_date": "2018-06-11",
+        "total_photos": 198439,
+        "cameras": [{
+            "name": "FHAZ",
+            "full_name": "Front Hazard Avoidance Camera"
+        }, {
+            "name": "NAVCAM",
+            "full_name": "Navigation Camera"
+        }, {
+            "name": "PANCAM",
+            "full_name": "Panoramic Camera"
+        }, {
+            "name": "MINITES",
+            "full_name": "Miniature Thermal Emission Spectrometer (Mini-TES)"
+        }, {
+            "name": "ENTRY",
+            "full_name": "Entry, Descent, and Landing Camera"
+        }, {
+            "name": "RHAZ",
+            "full_name": "Rear Hazard Avoidance Camera"
+        }]
+    }]
+}
+*/
 
-
-// let url = 'https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=DEMO_KEY';
-
-// function getRESTData(url) {
-//     var request = new XMLHttpRequest()
-    
-//     request.open('GET', url, true);
-    
-//     request.onload = function () {
-//         var data = JSON.parse(this.response);
-        
-//         if (request.status >= 200 && request.status < 400) {
-//             // console.log(data);
-//             parseData(data);
-//             buildIt(newData);
-//             return data;
-//         } else {
-//             console.log('GET error');
-//             return null;
-//         }
-//     }
-    
-//     request.send();
-// }
-
-
-// var retrievedData =  getRESTData(url);
-
-
-// let sampleJSONData = {
-//     "rovers": [{
-//         "id": 5,
-//         "name": "Curiosity",
-//         "landing_date": "2012-08-06",
-//         "launch_date": "2011-11-26",
-//         "status": "active",
-//         "max_sol": 2422,
-//         "max_date": "2019-05-30",
-//         "total_photos": 352391,
-//         "cameras": [{
-//             "name": "FHAZ",
-//             "full_name": "Front Hazard Avoidance Camera"
-//         }, {
-//             "name": "NAVCAM",
-//             "full_name": "Navigation Camera"
-//         }, {
-//             "name": "MAST",
-//             "full_name": "Mast Camera"
-//         }, {
-//             "name": "CHEMCAM",
-//             "full_name": "Chemistry and Camera Complex"
-//         }, {
-//             "name": "MAHLI",
-//             "full_name": "Mars Hand Lens Imager"
-//         }, {
-//             "name": "MARDI",
-//             "full_name": "Mars Descent Imager"
-//         }, {
-//             "name": "RHAZ",
-//             "full_name": "Rear Hazard Avoidance Camera"
-//         }]
-//     }, {
-//         "id": 7,
-//         "name": "Spirit",
-//         "landing_date": "2004-01-04",
-//         "launch_date": "2003-06-10",
-//         "status": "complete",
-//         "max_sol": 2208,
-//         "max_date": "2010-03-21",
-//         "total_photos": 124550,
-//         "cameras": [{
-//             "name": "FHAZ",
-//             "full_name": "Front Hazard Avoidance Camera"
-//         }, {
-//             "name": "NAVCAM",
-//             "full_name": "Navigation Camera"
-//         }, {
-//             "name": "PANCAM",
-//             "full_name": "Panoramic Camera"
-//         }, {
-//             "name": "MINITES",
-//             "full_name": "Miniature Thermal Emission Spectrometer (Mini-TES)"
-//         }, {
-//             "name": "ENTRY",
-//             "full_name": "Entry, Descent, and Landing Camera"
-//         }, {
-//             "name": "RHAZ",
-//             "full_name": "Rear Hazard Avoidance Camera"
-//         }]
-//     }, {
-//         "id": 6,
-//         "name": "Opportunity",
-//         "landing_date": "2004-01-25",
-//         "launch_date": "2003-07-07",
-//         "status": "complete",
-//         "max_sol": 5111,
-//         "max_date": "2018-06-11",
-//         "total_photos": 198439,
-//         "cameras": [{
-//             "name": "FHAZ",
-//             "full_name": "Front Hazard Avoidance Camera"
-//         }, {
-//             "name": "NAVCAM",
-//             "full_name": "Navigation Camera"
-//         }, {
-//             "name": "PANCAM",
-//             "full_name": "Panoramic Camera"
-//         }, {
-//             "name": "MINITES",
-//             "full_name": "Miniature Thermal Emission Spectrometer (Mini-TES)"
-//         }, {
-//             "name": "ENTRY",
-//             "full_name": "Entry, Descent, and Landing Camera"
-//         }, {
-//             "name": "RHAZ",
-//             "full_name": "Rear Hazard Avoidance Camera"
-//         }]
-//     }]
-// }
-
-// var newData = {};
-
-// function parseData(objectData) {
-//     console.log('started parsing')
-//     let seriesNames = Object.keys(objectData);
-//     let seriesCount = seriesNames.length;
-//     let seriesLength = objectData[seriesNames[0]].length;
-    
-//     for (let seriesIndex = 0; seriesIndex < seriesCount; seriesIndex++) {
-//         newData[seriesNames[seriesIndex]] = [];
-//         for (let elementIndex = 0; elementIndex < seriesLength; elementIndex++) {
-            
-//             const element = objectData[seriesNames[seriesIndex]][elementIndex];
-            
-//             let dataElement = {
-//                 label: element.name,
-//                 value: element.total_photos
-//             }
-            
-//             newData[seriesNames[seriesIndex]].push(dataElement);
-//         }
-//     }
-// }
 
 
 
@@ -219,23 +168,75 @@ for (let seriesCount = 1; seriesCount < 6; seriesCount++) {
 }
 
 
+///   get API Data   /// 
+
+var apiData = {};
+
+function parseData(objectData) {
+    console.log('started parsing')
+    let seriesNames = Object.keys(objectData);
+    let seriesCount = seriesNames.length;
+    let seriesLength = objectData[seriesNames[0]].length;
+    
+    for (let seriesIndex = 0; seriesIndex < seriesCount; seriesIndex++) {
+        apiData[seriesNames[seriesIndex]] = [];
+        for (let elementIndex = 0; elementIndex < seriesLength; elementIndex++) {
+
+            const element = objectData[seriesNames[seriesIndex]][elementIndex];
+            
+            let dataElement = {
+                label: element.name,
+                value: element.total_photos
+            }
+            
+            apiData[seriesNames[seriesIndex]].push(dataElement);
+        }
+    }
+}
+
+let url = 'https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=DEMO_KEY';
+
+function getRESTData(url) {
+    var request = new XMLHttpRequest()
+    
+    request.open('GET', url, true);
+    
+    request.onload = function () {
+        var data = JSON.parse(this.response);
+        
+        if (request.status >= 200 && request.status < 400) {
+            console.log(data);
+            parseData(data);
+            // buildIt(apiData);
+            buildIt(dataSeries, dataSeries2, dataSeries3, apiData)
+
+            return data;
+        } else {
+            console.log('GET error');
+            return null;
+        }
+    }
+    
+    request.send();
+}
 
 
+var retrievedData = getRESTData(url);
 
-buildIt(dataSeries, dataSeries2, dataSeries3)
+
 
 
 ////////////////////////////////////////////////////////////////////
 
-function buildIt(data, data2, data3) {
+function buildIt(data, data2, data3, apiData) {
     // console.log('data in buildIt' )
     // console.log(data);
 
     function scene1(){
         let sceneOptions = {
             id: 'mixed', // required - id of canvas element to use
-            width: 600, //  <default 300>
-            height: 350, //  <default 200>
+            width: 550, //  <default 300>
+            height: 300, //  <default 200>
             cameraFirstPerson: true, //  <default true>
             // backgroundColor: {          //  <default white>
             //     r: 0,
@@ -250,8 +251,8 @@ function buildIt(data, data2, data3) {
 
         let chartOptions = {
             type: 'pie',
-            title: 'Monthly Pie Sales',
-            data: data,
+            title: 'Mars Rovers Picture Count',
+            data: apiData,
     
             titleDepth: .01, //  < default .01 >
             doughnut: false,  // applies to pie chart only
@@ -270,8 +271,32 @@ function buildIt(data, data2, data3) {
         };
     
         let chart1_1 = sceneManager1.addChart(chartOptions);
+
+
+
+        chartOptions = {
+            type: 'pie',
+            title: 'Mars Rovers Picture Count',
+            data: data,
     
-        // setTimeout( () => {sceneManager1.removeChart(chart1_1)}, 10000);
+            titleDepth: .01, //  < default .01 >
+            doughnut: false,  // applies to pie chart only
+    
+            round: false, //  < default false >  applies to bar chart only        
+            depth: 10.5, //  < default .25 >          
+            alpha: 1, //  < default 1 >
+    
+            textDepth: .01, //  < default .01 >
+            textColor: { //  < default black >
+                r: 0,
+                g: 0,
+                b: 0
+            },
+            transition: true
+        };
+        
+    
+        setTimeout( () => {sceneManager1.updateChart(chart1_1, chartOptions)}, 10000);
     
     
         chartOptions = {
@@ -304,8 +329,8 @@ function buildIt(data, data2, data3) {
     function scene2(){
         let sceneOptions = {
             id: 'bar1', // required - id of canvas element to use
-            width: 600, //  <default 300>
-            height: 350, //  <default 200>
+            width: 550, //  <default 300>
+            height: 300, //  <default 200>
             cameraFirstPerson: true, //  <default true>
             backgroundColor: { //  <default white>
                 r: 0.95,
@@ -411,8 +436,8 @@ function buildIt(data, data2, data3) {
     function scene3(){
         let sceneOptions = {
             id: 'bar2', // required - id of canvas element to use
-            width: 600, //  <default 300>
-            height: 350, //  <default 200>
+            width: 550, //  <default 300>
+            height: 300, //  <default 200>
             cameraFirstPerson: false, //  <default true>
             backgroundColor: { //  <default white>
                 r: 0.0,
@@ -488,7 +513,7 @@ function buildIt(data, data2, data3) {
         let sceneOptions = {
             id: 'bar3', // required - id of canvas element to use
             width: 1200, //  <default 300>
-            height: 600, //  <default 200>
+            height: 650, //  <default 200>
             cameraFirstPerson: true, //  <default true>
             backgroundColor: { //  <default white>
                 r: 0.15,
@@ -542,8 +567,8 @@ function buildIt(data, data2, data3) {
     function scene5(){
         let sceneOptions = {
             id: 'bar4', // required - id of canvas element to use
-            width: 1200, //  <default 300>
-            height: 600, //  <default 200>
+            width: 550, //  <default 300>
+            height: 300, //  <default 200>
             cameraFirstPerson: false, //  <default true>
             backgroundColor: { //  <default white>
                 r: .95,
@@ -650,8 +675,8 @@ function buildIt(data, data2, data3) {
     function scene7(){
         let sceneOptions = {
             id: 'gauge', // required - id of canvas element to use
-            width: 600, //  <default 300>
-            height: 350, //  <default 200>
+            width: 550, //  <default 300>
+            height: 300, //  <default 200>
             cameraFirstPerson: false, //  <default true>
             backgroundColor: { //  <default white>
                 r: .95,
@@ -735,17 +760,14 @@ function buildIt(data, data2, data3) {
     }
 
 
-
-
-
     ////////////////////////////////////////////////////////////////////
 
 
     function scene8(){
         let sceneOptions = {
             id: 'area', // required - id of canvas element to use
-            width: 600, //  <default 300>
-            height: 350, //  <default 200>
+            width: 550 , //  <default 300>
+            height: 300, //  <default 200>
             cameraFirstPerson: false, //  <default true>
             backgroundColor: { //  <default white>
                 r: .95,
@@ -791,13 +813,13 @@ function buildIt(data, data2, data3) {
     ////////////////////////////////////////////////////////////////////
 
 
-    // scene1();
-    scene2();
-    // scene3();
-    // scene4();
-    // scene5();
-    // scene7();
-    // scene8();
+    scene1();
+    // scene2();
+    scene3();
+    scene4();
+    scene5();
+    scene7();
+    scene8();
 
 
 

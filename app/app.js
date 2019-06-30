@@ -3,6 +3,8 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var ioServer = require('socket.io')(http);
+var nodemailer = require('nodemailer');
+
 
 const localport = 5000;
 
@@ -28,6 +30,44 @@ ioServer.on('connection', (socket) => {
     console.log('Client connected');
     socket.on('disconnect', () => console.log('Client disconnected'));
     socket.on('msg', (msg)=>{console.log(msg); console.log(socket.id)});
+ 
+    socket.on('updateSceneRequest', (scene, options) => {
+        console.log('updateSceneRequest');
+        console.log(scene);
+        console.log(options);
+        socket.emit('updateSceneOrder', scene, options);
+    });
+ 
+    socket.on('addChartRequest', (chart, options) => {
+        console.log('addChartRequest');
+        console.log(chart);
+        console.log(options);
+        socket.emit('addChartOrder', chart, options);
+    });
+ 
+ 
+    socket.on('updateChartRequest', (chart, options) => {
+        console.log('updateChartRequest');
+        console.log(chart);
+        console.log(options);
+        socket.emit('updateChartOrder', chart, options);
+    });
+ 
+ 
+    socket.on('removeChartRequest', (chart, options) => {
+        console.log('removeChartRequest');
+        console.log(chart);
+        console.log(options);
+        socket.emit('removeChartOrder', chart, options);
+    });
+ 
+ 
+ 
+    socket.on('APIrequest', (options) => { 
+        console.log('APIrequest');
+        console.log(options);
+        socket.emit('APIreply', options)
+    });
 });
 
 
