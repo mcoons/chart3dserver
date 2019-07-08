@@ -174,12 +174,8 @@ class ChartSceneManager {
         return chart;
     }
 
-    updateChart(chart, options) {
+    updateChart(options) {
 
-        // console.log('chart in update');
-        // console.log(chart);
-
-        // if (options.type === chart.)
     }
 
     removeChart(id) {
@@ -254,6 +250,7 @@ class BaseChart {
         this.data = options.data;
         this.gui3D = gui3D;
         this.gui2D = gui2D;
+
 
         this.mySlices = [];
         this.myBars = [];
@@ -522,7 +519,7 @@ class BarChart extends BaseChart {
         this.masterTransform.position.x = 0;
         this.masterTransform.position.y = 0;
 
-        // console.log(this.options.data);
+        console.log(this.options.data);
 
     }
 
@@ -686,15 +683,15 @@ class BarChart extends BaseChart {
     }
 
 
-    // addChartAPI(url, labelField, valueField){
-    //     console.log('Adding API info: ', url, labelField, valueField);
+    addChartAPI(url, labelField, valueField){
+        console.log('Adding API info: ', url, labelField, valueField);
 
-    // }
+    }
 
-    // getAPIData(url, labelField, valueField){
-    //     console.log('Fetching from: ', url);
-    //     console.log('Plotting field ' + labelField + ' with data from ' + valueField);
-    // }
+    getAPIData(url, labelField, valueField){
+        console.log('Fetching from: ', url);
+        console.log('Plotting field ' + labelField + ' with data from ' + valueField);
+    }
 
 
 
