@@ -270,9 +270,9 @@ function buildIt(data, data2, data3, apiData) {
             transition: true
         };
     
-        let chart1_1l
-        setTimeout( () =>  sceneManager1.addChart(chartOptions), 10000);
         // let chart1_1 = sceneManager1.addChart(chartOptions);
+        // setTimeout( () =>  sceneManager1.addChart(chartOptions), 10000);
+        let chart1_1 = sceneManager1.addChart(chartOptions);
 
 
 
@@ -528,11 +528,11 @@ function buildIt(data, data2, data3, apiData) {
         sceneManager4.scene.activeCamera.position.z = -500;
 
         let chartOptions = {
-            type: 'bar',
-            title: 'Quarterly Report',
-            data: data,
+            type: '3D',
+            title: '3D Printer Sales',
+            data: data2,
     
-            titleDepth: .01, //  < default .01 >
+            titleDepth: 1, //  < default .01 >
     
             round: false, //  < default false >          
             depth: 1.5, //  < default .25 >          
@@ -541,23 +541,10 @@ function buildIt(data, data2, data3, apiData) {
     
             textDepth: .01, //  < default .01 >
             textColor: { //  < default black >
-                r: 0,
-                g: 0,
+                r: .8,
+                g: .8,
                 b: 0
             }
-        };
-
-        chartOptions.title = '3D Printer Sales';
-
-        chartOptions.type = '3D';
-        chartOptions.round = false;
-        chartOptions.alpha = 1;
-        chartOptions.titleDepth = 1;
-        chartOptions.data = data2;
-        chartOptions.textColor = {
-            r: .8,
-            g: .8,
-            b: .0
         };
     
         let chart4_1 = sceneManager4.addChart(chartOptions);
@@ -610,8 +597,9 @@ function buildIt(data, data2, data3, apiData) {
             r:0,
             g:0,
             b:0
-        }
-        chartOptions.titleDepth = 2;
+        };
+        
+        chartOptions.titleDepth = .1;
         chartOptions.showBackplanes = true;
 
         
@@ -815,13 +803,15 @@ function buildIt(data, data2, data3, apiData) {
     ////////////////////////////////////////////////////////////////////
 
 
-    scene1();
-    // scene2();
-    scene3();
-    scene4();
-    scene5();
-    scene7();
-    scene8();
+    setTimeout(scene1, 0);
+    setTimeout(scene2, 0);
+    setTimeout(scene3, 0);
+    setTimeout(scene4, 0);
+    setTimeout(scene5, 0);
+    // setTimeout(scene6, 0);
+    setTimeout(scene7, 0);
+    setTimeout(scene8, 0);
+
 
 
 

@@ -176,8 +176,8 @@ class ChartSceneManager {
 
     updateChart(chart, options) {
 
-        // console.log('chart in update');
-        // console.log(chart);
+        console.log('chart in update');
+        console.log(chart);
 
         // if (options.type === chart.)
     }
@@ -271,12 +271,12 @@ class BaseChart {
 
         this.padding = 10;
 
-        this.labelScale = 3.5;
+        this.labelScale = 4.0;
 
         // Basic line/text material
         this.lineMat = new BABYLON.StandardMaterial("lineMat", this.scene);
         this.lineMat.alpha = 1;
-        // this.lineMat.specularColor = new BABYLON.Color3(0, 0, 0);
+        this.lineMat.specularColor = new BABYLON.Color3(0, 0, 0);
         // this.lineMat.emissiveColor = new BABYLON.Color3(0, 0, 0);
 
         if (this.options.textColor) {
@@ -323,7 +323,6 @@ class BaseChart {
             this.materials[index].diffuseColor.b = color.b;
         }
     }
-
 
     updateMaterialGradient(startColor, endColor, startIndex, endIndex) { // 0-63
 
@@ -607,9 +606,9 @@ class BarChart extends BaseChart {
                     // bar.material.emissiveColor = new BABYLON.Color3(.1, .1, .1);
                     // this.hoverPanel = this.gui2D.showObjectValue(bar, this.scene.pointerX, this.scene.pointerY);
                     // console.log('mouseOver', bar);
-                },
+                }
 
-            }
+            };
 
             this.addActions(chartMarginPlane, actionsObject);
 
@@ -686,15 +685,15 @@ class BarChart extends BaseChart {
     }
 
 
-    // addChartAPI(url, labelField, valueField){
-    //     console.log('Adding API info: ', url, labelField, valueField);
+    addChartAPI(url, labelField, valueField){
+        console.log('Adding API info: ', url, labelField, valueField);
 
-    // }
+    }
 
-    // getAPIData(url, labelField, valueField){
-    //     console.log('Fetching from: ', url);
-    //     console.log('Plotting field ' + labelField + ' with data from ' + valueField);
-    // }
+    getAPIData(url, labelField, valueField){
+        console.log('Fetching from: ', url);
+        console.log('Plotting field ' + labelField + ' with data from ' + valueField);
+    }
 
 
 
