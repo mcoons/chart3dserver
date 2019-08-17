@@ -252,7 +252,7 @@ function buildIt(data, data2, data3, apiData) {
         let chartOptions = {
             type: 'pie',
             title: 'Mars Rovers Picture Count',
-            data: apiData,
+            data: apiData ? apiData : data3,
     
             titleDepth: .01, //  < default .01 >
             doughnut: false,  // applies to pie chart only
