@@ -146,9 +146,6 @@ function getColor(startColor, endColor, min, max, value) {
     zChar.position = new BABYLON.Vector3(0, 0.05 * size, 0.9 * size);
   };
 
-
-
-
 var colorList = [
     "#000000",
     "#00FF00",
