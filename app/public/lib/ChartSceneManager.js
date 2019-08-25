@@ -1,5 +1,3 @@
-
-
 class ChartSceneManager {
 
     constructor(options) { // scene options object
@@ -685,12 +683,12 @@ class BarChart extends BaseChart {
     }
 
 
-    addChartAPI(url, labelField, valueField){
+    addChartAPI(url, labelField, valueField) {
         console.log('Adding API info: ', url, labelField, valueField);
 
     }
 
-    getAPIData(url, labelField, valueField){
+    getAPIData(url, labelField, valueField) {
         console.log('Fetching from: ', url);
         console.log('Plotting field ' + labelField + ' with data from ' + valueField);
     }
@@ -699,8 +697,8 @@ class BarChart extends BaseChart {
 
     myUpdate() {
         // Placeholder for chart specific overload
-        if (!this.options.data){
-            if (!this.options.apiInfo){
+        if (!this.options.data) {
+            if (!this.options.apiInfo) {
                 console.log('ERROR: "data" or "API info" must be defined');
             } else {
                 console.log('Fetching API data');
@@ -794,7 +792,7 @@ class BarChart extends BaseChart {
                         }]
                     }]
                 }
-                
+
 
             }
 
@@ -1827,7 +1825,7 @@ class Gauge2 extends BaseChart {
 
         // basic settings for a cylinder
         let settings = {
-            height:35,
+            height: 35,
             diameterTop: 50,
             diameterBottom: 50,
             tessellation: 40,
@@ -2084,7 +2082,7 @@ class AreaChart extends BaseChart {
             }
 
             var holes = [];
-            shapePoints.push(new BABYLON.Vector3((this.seriesLength-1) * (this.elementWidth + this.padding) + this.barWidth / 2 + this.padding, 0, 0));
+            shapePoints.push(new BABYLON.Vector3((this.seriesLength - 1) * (this.elementWidth + this.padding) + this.barWidth / 2 + this.padding, 0, 0));
 
             shapePoints.reverse();
             var polygon = BABYLON.MeshBuilder.ExtrudePolygon("polygon", {
@@ -2111,4 +2109,3 @@ class AreaChart extends BaseChart {
         // this.masterTransform.rotation.z +=.007;
     }
 }
-
