@@ -1,6 +1,6 @@
 
 
-class ChartSceneManager {
+export class ChartSceneManager {
 
     constructor(options) { // scene options object
         this.options = {

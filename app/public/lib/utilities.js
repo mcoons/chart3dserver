@@ -263,3 +263,6 @@ var months = {
         short: 'Dec'
     }
 }
+
+
+export {remap, lerp, hexToRgb, calculateScale, map, getColor, showAxis, colorList, months};

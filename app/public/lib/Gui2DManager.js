@@ -1027,3 +1027,4 @@ function getMousePos(canvas, evt) {
     };
   }
 
+export { Gui2DManager };

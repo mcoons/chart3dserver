@@ -1,3 +1,23 @@
+// import * as BABYLON from '../babylonjs/babylon.max.js';
+
+import {
+    Gui2DManager
+} from '../lib/Gui2DManager.js';
+import {
+    Gui3DManager
+} from '../lib/Gui3DManager.js';
+import {
+    remap,
+    lerp,
+    hexToRgb,
+    calculateScale,
+    map,
+    getColor,
+    showAxis,
+    colorList,
+    months
+} from '../lib/utilities.js';
+
 class ChartSceneManager {
 
     constructor(options) { // scene options object
@@ -475,7 +495,6 @@ class BaseChart {
         BABYLON.Animation.CreateAndStartAnimation('rotatez', this.masterTransform, 'rotation.z', fps, fps * seconds, start, end, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
     }
 
-
     myUpdate() {
         // Placeholder for chart specific overload
     }
@@ -682,7 +701,6 @@ class BarChart extends BaseChart {
         // this.masterTransform.rotation.z +=.01;
     }
 
-
     addChartAPI(url, labelField, valueField) {
         console.log('Adding API info: ', url, labelField, valueField);
 
@@ -692,8 +710,6 @@ class BarChart extends BaseChart {
         console.log('Fetching from: ', url);
         console.log('Plotting field ' + labelField + ' with data from ' + valueField);
     }
-
-
 
     myUpdate() {
         // Placeholder for chart specific overload
@@ -1005,7 +1021,6 @@ class StackedBarChart extends BaseChart {
         // this.masterTransform.rotation.y +=.01;
         // this.masterTransform.rotation.z +=.01;
     }
-
 }
 
 
@@ -2109,3 +2124,7 @@ class AreaChart extends BaseChart {
         // this.masterTransform.rotation.z +=.007;
     }
 }
+
+export {
+    ChartSceneManager
+};

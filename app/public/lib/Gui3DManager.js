@@ -208,3 +208,5 @@ class Gui3DManager {
         return text1;
     }
 }
+
+export { Gui3DManager };
