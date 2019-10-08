@@ -10,7 +10,7 @@ const pool = new Pool({
 router.get('/db', async (req, res) => {
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM chart_data');
+      const result = await client.query('SELECT * FROM chart_data order by id desc');
 
       res.render('db', { 'results': (result) ? result.rows : null,
                          jumboPic: '/images/photos/denver.jpg',
