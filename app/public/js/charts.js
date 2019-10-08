@@ -566,7 +566,7 @@ async function scene5() {
 
 
     chartOptions.title = 'UFO Sightings';
-    chartOptions.data = data;
+    chartOptions.data = data2;
 
 
     let chart5_3 = sceneManager5.addChart(chartOptions);
@@ -575,6 +575,7 @@ async function scene5() {
 
     chartOptions.title = 'Books Read';
 
+    chartOptions.data = data3;
 
     let chart5_4 = sceneManager5.addChart(chartOptions);
     chart5_4.masterTransform.position.x = 450;
