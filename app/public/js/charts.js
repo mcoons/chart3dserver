@@ -509,8 +509,8 @@ async function scene5() {
         height: 350, //  <default 200>
         cameraFirstPerson: false, //  <default true>
         backgroundColor: { //  <default white>
-            r: .95,
-            g: .95,
+            r: 1,
+            g: 1,
             b: 1
         }
     };
