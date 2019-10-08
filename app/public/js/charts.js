@@ -510,8 +510,8 @@ async function scene5() {
         cameraFirstPerson: false, //  <default true>
         backgroundColor: { //  <default white>
             r: 1,
-            g: 1,
-            b: 1
+            g: 0,
+            b: 0
         }
     };
 
