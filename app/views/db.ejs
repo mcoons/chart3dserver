@@ -21,8 +21,8 @@
 
 <h1>Display Data</h1>
 <p>Add data list with checkmark for editing.</p>
-
 <button>Edit</button>
+
 <h1>Add Data</h1>
 <p>Fields for Label, Value</p>
 Label:<br>
@@ -30,6 +30,30 @@ Label:<br>
 <br>
 Value:<br>
 <input type="text" name="value" value="Enter Value">
+
+<div id="chartTypeDiv">
+  <label for="bar">
+      <input type="radio" id="bar" name="chartType" value="bar">
+      Bar Chart
+  </label>
+
+  <label for="stbar">
+      <input type="radio" id="stbar" name="chartType" value="stbar" checked>
+      Stacked Bar Chart
+  </label>
+    
+  <label for="line">
+      <input type="radio" id="line" name="chartType" value="line">
+      Line Chart
+  </label>
+</div>
+
+
+
+
+
+
+
 <br><br>
 <input type="submit" value="Submit">
 
