@@ -308,3 +308,9 @@ time {
     margin-left:10px;
   }
 }
+
+
+#chartTypeDiv label {
+  display: block;
+  margin-bottom: 0px;
+}
