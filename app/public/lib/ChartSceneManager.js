@@ -86,17 +86,17 @@ class ChartSceneManager {
         // let light0 = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, 1, -1), scene);
         // light0.intensity = .55;
 
-        let light1 = new BABYLON.PointLight("light1", new BABYLON.Vector3(1500, 1500, 1500), scene);
-        light1.intensity = .8;
+        let light1 = new BABYLON.PointLight("light1", new BABYLON.Vector3(2000, 2000, 2000), scene);
+        light1.intensity = 1;
 
-        let light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(-1500, -1500, -1500), scene);
-        light2.intensity = .8;
+        let light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(-2000, -2000, -2000), scene);
+        light2.intensity = 1;
 
-        let light3 = new BABYLON.PointLight("light2", new BABYLON.Vector3(1500, 1500, -1500), scene);
-        light3.intensity = .8;
+        let light3 = new BABYLON.PointLight("light2", new BABYLON.Vector3(2000, 2000, -2000), scene);
+        light3.intensity = 1;
 
-        let light4 = new BABYLON.PointLight("light2", new BABYLON.Vector3(-1500, -1500, 1500), scene);
-        light4.intensity = .8;
+        let light4 = new BABYLON.PointLight("light2", new BABYLON.Vector3(-2000, -2000, 2000), scene);
+        light4.intensity = 1;
 
         let camera;
 

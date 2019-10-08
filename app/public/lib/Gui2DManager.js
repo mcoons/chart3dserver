@@ -209,12 +209,6 @@ class Gui2DManager {
         panelLightOptions.addControl(slider);   
 
 
-
-
-
-
-
-
         let buttonGeneric = BABYLON.GUI.Button.CreateSimpleButton('generic button', '***');
         formatButton(buttonGeneric);
         // buttonGeneric.onPointerUpObservable.add(()=>{this.advancedTexture.removeControl(panelLightOptions)});
