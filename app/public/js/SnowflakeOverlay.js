@@ -33,6 +33,8 @@ class SnowflakeOverlay {
         this.intensityInterval = setInterval(() => (this.changeIntensity)(), this.INTENSITY_CHANGE_INTERVAL);
         
         window.requestAnimationFrame(this.mainLoop.bind(this));
+
+        console.log('Inside snowflakes');
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////
